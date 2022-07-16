@@ -1,0 +1,66 @@
+{
+  "name": "chatbot-iot-terminal",
+  "version": "0.1.0",
+  "description": "聊天机器人物联网设备终端插件",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" node ./examples/chatbot.ts",
+    "start-no-tls": "WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT=true npm run start",
+    "dev": "cross-env NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" node ./examples/dev.ts",
+    "dev-no-tls": "WECHATY_PUPPET_SERVICE_NO_TLS_INSECURE_CLIENT=true npm run dev",
+    "start:mp": "node index.js",
+    "xp": "node xp.js",
+    "gm": "node wxtool.js",
+    "start:pm2": "pm2 start wxtool.js",
+    "runlist": "pm2 list",
+    "logs": "pm2 logs",
+    "restart": "pm2 restart wxtool.js",
+    "stop": "pm2 stop wxtool.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "file-box": "^1.4.12",
+    "moment": "^2.29.1",
+    "mqtt": "^4.2.8",
+    "silk-sdk": "^0.2.2",
+    "uuid": "^8.3.2",
+    "wechaty-puppet": "^1.20.1"
+  },
+  "devDependencies": {
+    "@chatie/eslint-config": "^1.0.4",
+    "@chatie/tsconfig": "^4.6.3",
+    "@types/node": "^18.0.5",
+    "@types/qrcode-terminal": "^0.12.0",
+    "@types/request-promise": "^4.1.48",
+    "check-node-version": "^4.2.1",
+    "fs": "^0.0.1-security",
+    "is-pr": "^2.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "request-promise": "^4.2.6",
+    "ts-node": "^10.8.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.4.4",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-padlocal": "^1.11.13",
+    "wechaty-puppet-wechat": "^1.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atorber/chatbot-IoT-terminal.git"
+  },
+  "keywords": [
+    "chatbot"
+  ],
+  "author": "atorber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atorber/chatbot-IoT-terminal/issues"
+  },
+  "homepage": "https://github.com/atorber/chatbot-IoT-terminal#readme"
+}
