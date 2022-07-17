@@ -50,12 +50,19 @@ const initConfig = {
       'scan'
     ], //上报事件列表
   },
+  // wechatyConfig: {
+  //   name: 'easy-bot',
+  //   puppet: String(process.env['WECHATY_PUPPET'] || ''),
+  //   puppetOptions: {
+  //     token: process.env['WECHATY_TOKEN'] || '',
+  //   },
+  // }
   wechatyConfig: {
     name: 'easy-bot',
-    puppet: String(process.env['WECHATY_PUPPET'] || 'wechaty-puppet-service'),
+    puppet: String(process.env['WECHATY_PUPPET'] || 'wechaty-puppet-wechat'),
     puppetOptions: {
-      token: process.env['WECHATY_TOKEN'] || 'puppet_wxwork_893a781b8bdec1e1',
-    },
+      uos: true
+    }
   }
 }
 
