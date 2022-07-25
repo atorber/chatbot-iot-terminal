@@ -10,8 +10,8 @@ function getCurTime () {
   const timestamp = new Date().getTime()
   const timezone = 8 // 目标时区时间，东八区
   const offsetGMT = new Date().getTimezoneOffset() // 本地时间和格林威治的时间差，单位为分钟
-  // const time = timestamp + offsetGMT * 60 * 1000 + timezone * 60 * 60 * 1000
-  const time = timestamp + offsetGMT * 60 * 1000
+  const time = timestamp + offsetGMT * 60 * 1000 + timezone * 60 * 60 * 1000
+  // const time = timestamp + offsetGMT * 60 * 1000
 
   return time
 }
@@ -129,7 +129,7 @@ async function wechaty2chatdev (message) {
     try {
       const roomAvatar = await room.avatar()
       const name = roomAvatar.name
-      await roomAvatar.toFile(`./folder/${name}`, true)
+      await roomAvatar.toFile(`./${name}`, true)
       log.info(`Room: ${topic} with avatar file: ${name}`)
 
       log.info('群头像room.avatar()============')
