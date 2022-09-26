@@ -15,7 +15,7 @@ export MQTT_ENDPOINT="xxxxx"
 export MQTT_PORT=1883
 export MQTT_EVENT_TOPIC="xxxx/xxxx/xxxx"
 export MQTT_COMMAND_TOPIC="xxxx/xxxx/xxxx"
-export MQTT_COMMAND_TOPIC="xxxx/xxxx/xxxx"
+export MQTT_PROPERTY_TOPIC="xxxx/xxxx/xxxx"
 npm run start
 ```
 
