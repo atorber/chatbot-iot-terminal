@@ -26,11 +26,11 @@ const initConfig = {
     username: process.env['MQTT_USERNAME'] || '', //设备MQTT用户名
     password: process.env['MQTT_PASSWORD'] || '', //设备MQTT密码
     clintId: process.env['BOT_ID'] || v4(), //设备MQTT客户端ID
-    endPoint: 'bddmp.iot.gz.baidubce.com', //设备MQTT接入地址
-    port: 1883, //设备MQTT接入端口号
+    endPoint: process.env['MQTT_ENDPOINT'] ||'bddmp.iot.gz.baidubce.com', //设备MQTT接入地址
+    port: process.env['MQTT_PORT'] ||1883, //设备MQTT接入端口号
     event: process.env['MQTT_EVENT_TOPIC'] || '', //事件上报topic
     command: process.env['MQTT_COMMAND_TOPIC'] || '', //服务调用topic
-    property: process.env['MQTT_COMMAND_TOPIC'] || '', //属性上报topic
+    property: process.env['MQTT_PROPERTY_TOPIC'] || '', //属性上报topic
     eventLoggerConfig: [
       'login',
       'logout',
@@ -59,7 +59,7 @@ const initConfig = {
   // }
   wechatyConfig: {
     name: 'easy-bot',
-    puppet: String(process.env['WECHATY_PUPPET'] || 'wechaty-puppet-wechat'),
+    puppet: 'wechaty-puppet-wechat',
     puppetOptions: {
       uos: true
     }
