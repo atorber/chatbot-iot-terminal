@@ -6,6 +6,21 @@
 
 将聊天机器人作为一个IoT终端，使用数字孪生语义聊天机器人机器人进行描述，使用MQTT与云平台进行连接和通讯
 
+## 快速开始
+
+```
+export MQTT_USERNAME="xxxx"
+export MQTT_PASSWORD="xxxxx"
+export MQTT_ENDPOINT="xxxxx"
+export MQTT_PORT=1883
+export MQTT_EVENT_TOPIC="xxxx/xxxx/xxxx"
+export MQTT_COMMAND_TOPIC="xxxx/xxxx/xxxx"
+export MQTT_COMMAND_TOPIC="xxxx/xxxx/xxxx"
+npm run start
+```
+
+## 接口定义
+
 事件：对应wechaty定义的一系列event
 
 服务：控制聊天机器人
